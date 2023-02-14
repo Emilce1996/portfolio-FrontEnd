@@ -1,0 +1,200 @@
+.cuerpo {
+    background-color: #abd6f5;
+}
+
+.fondo {
+    background: linear-gradient(to top, #38a9fa, #abd6f5);
+}
+/* linea*/
+.borde {
+    border-bottom: 1px solid #38a9fa;
+    padding-bottom: 3.5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home1 {
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imagen {
+    height: 50px;
+    width: 50px;
+}
+
+.border_radius2 {
+    border:2px solid transparent;
+    border-radius: 50%;
+    background-color: skyblue;
+    padding: 20px;
+    width: 200px;
+    height: 200px;  
+}
+
+.texto {
+    text-align: left;
+    margin-top: 120px;
+    margin-left: 30px;
+}
+
+.datos1 {
+    width: 1265px;
+    margin: 60px auto 0 auto;
+}
+
+.texto1 {
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 480px;
+}
+
+.home .texto4 .card {
+    margin-top: 20px;
+    background: radial-gradient(white, #38a9fa);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container .card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: radial-gradient(white, #38a9fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.container .card .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.container .card .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.container .card .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 9;
+    stroke: #38a9fa;
+    transform: translate(5px, 5px);
+}
+
+.container .card .percent svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #38a9fa;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.number h2 span {
+    font-weight: 300;
+    color: #38a9fa;
+    font-size: 0.5em;
+}
+
+.number p {
+    font-weight: 500;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    margin-top: -10px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.login-card {
+    background-color: white;
+    border-radius: 20px;
+    width: 25rem;
+    margin: 20px;
+}
+
+.botones {
+    float: right;
+}
